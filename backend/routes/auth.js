@@ -101,7 +101,7 @@ router.post('/login', [
 
 });
 
-// Route 3: Create user using: POST method -> '/api/auth/getUser'. Login required
+// Route 3:Get loggedin user details using: POST '/api/auth/getUser'. Login required
 router.post('/getUser', fetchUser, async (req, res) => {
   try {
     const userId = req.user.id;
