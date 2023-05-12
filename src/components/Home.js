@@ -4,18 +4,18 @@ import Notes from './Notes';
 const Home = () => {
   return (
     <div>
-      <div class="container my-3">
+      <div className="container my-3">
         <h2>Add a Note</h2>
         <form className='my-3'>
-          <div class="mb-3">
-            <label htmlFor="exampleInputEmail1" class="form-label">Email</label> <br />
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Title</label> <br />
+            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
-          <div class="mb-3">
-            <label htmlFor="exampleInputPassword1" class="form-label">Password</label> <br />
-            <input type="password" class="form-control" id="exampleInputPassword1" />
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">Description</label> <br />
+            <input type="password" className="form-control" id="exampleInputPassword1" />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
 

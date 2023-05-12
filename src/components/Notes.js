@@ -7,10 +7,10 @@ const Notes = () => {
     const {notes} = context;
     
     return (
-        <div class="row my-5">
+        <div className="row my-5">
             <h2 className='my-3'>Your Notes</h2>
             {notes.map((note) => {
-                return <Noteitem note = {note} />;
+                return <Noteitem key={note._id} note={note} />;
             })}
         </div>
     )
