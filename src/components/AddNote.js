@@ -5,7 +5,7 @@ const AddNote = () => {
     const context = useContext(noteContext);
     const {addNote} = context;
 
-    const [note, setNote] = useState({title: "", description: "", tag: "default"});
+    const [note, setNote] = useState({title: "", description: "", tag: ""});
 
     const handleAddNote = (e) => {
         e.preventDefault(); // prevents the page from loading
@@ -25,7 +25,6 @@ const AddNote = () => {
           <label htmlFor="title" className="form-label">
             Title
           </label>
-          <br />
           <input
             type="text"
             className="form-control"
@@ -39,12 +38,23 @@ const AddNote = () => {
           <label htmlFor="description" className="form-label">
             Description
           </label>{" "}
-          <br />
           <input
             type="text"
             name="description"
             className="form-control"
             id="description"
+            onChange={onChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="tag" className="form-label">
+            Tag
+          </label>{" "}
+          <input
+            type="text"
+            name="tag"
+            className="form-control"
+            id="tag"
             onChange={onChange}
           />
         </div>

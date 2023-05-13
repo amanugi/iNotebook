@@ -26,7 +26,7 @@ const NoteState = (props) => {
   // Add a note
   const addNote = async (title, description, tag) => {
     // API Call
-    const response = await fetch(`${host}/api/notes/addeNote`, {
+    const response = await fetch(`${host}/api/notes/addNote`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const NoteState = (props) => {
 
     //const json = response.json();
     console.log("response", response);
-    
+
     console.log("Deleting the node with id:" + id);
     const newNotes = notes.filter((note) => {
       return note._id !== id;
