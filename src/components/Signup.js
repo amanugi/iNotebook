@@ -25,13 +25,13 @@ const Signup = (props) => {
         
           if(json.success){
             // save the auth token
-            localStorage.setItem('token', json.authtoken);
+            localStorage.setItem('token', json.authToken);
             props.showAlert("Account created successfully!", "success");
             //redirect to home
             navigate('/');
           }
           else{
-            props.showAlert("Invalid details", "danger");
+            props.showAlert("User already exists", "danger");
           }
 
     }
@@ -42,6 +42,7 @@ const Signup = (props) => {
 
   return (
     <div>
+        <h2>Sign-up to Create an Account</h2>
         <form className="my-4" onSubmit={handleSubmit}>
             <div className="mb-3">
             <label htmlFor="name" className="form-label">

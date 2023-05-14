@@ -37,6 +37,11 @@
   }
 }
 
+/* body{
+  background-color:darkslategray;
+  color: white;
+} */
+
 i {
   cursor: pointer;
 }

@@ -80,7 +80,7 @@ const Notes = (props) => {
               <form className="my-3">
                 <div className="mb-3">
                   <label htmlFor="etitle" className="form-label">
-                    Title
+                    <h6>Title</h6>
                   </label>
                   <input
                     type="text"
@@ -96,7 +96,7 @@ const Notes = (props) => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="edescription" className="form-label">
-                    Description
+                    <h6>Description</h6>
                   </label>{" "}
                   <input
                     type="text"
@@ -111,7 +111,7 @@ const Notes = (props) => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="etag" className="form-label">
-                    Tag
+                    <h6>Tag</h6>
                   </label>
                   <input
                     type="text"
