@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import noteContext from '../context/notes/noteContext';
 
-const AddNote = () => {
+const AddNote = (props) => {
     const context = useContext(noteContext);
     const {addNote} = context;
 
@@ -10,6 +10,8 @@ const AddNote = () => {
     const handleAddNote = (e) => {
         e.preventDefault(); // prevents the page from loading
         addNote(note.title, note.description, note.tag);
+        setNote({title: "", description: "", tag: ""})
+        props.showAlert("Added Successfully!", "success");
     }
 
     const onChange = (e) => {
@@ -30,7 +32,10 @@ const AddNote = () => {
             className="form-control"
             id="title"
             name="title"
+            value={note.title}
             onChange={onChange}
+            minLength={5}
+            required
             aria-describedby="emailHelp"
           />
         </div>
@@ -43,6 +48,9 @@ const AddNote = () => {
             name="description"
             className="form-control"
             id="description"
+            value={note.description}
+            minLength={5}
+            required
             onChange={onChange}
           />
         </div>
@@ -55,10 +63,11 @@ const AddNote = () => {
             name="tag"
             className="form-control"
             id="tag"
+            value={note.tag}
             onChange={onChange}
           />
         </div>
-        <button type="submit" className="btn btn-primary" onClick={handleAddNote}>
+        <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-primary" onClick={handleAddNote}>
           Add Note
         </button>
       </form>
